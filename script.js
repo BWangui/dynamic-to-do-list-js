@@ -1,4 +1,3 @@
-
 // Wait for the DOM to load before executing the script
 document.addEventListener('DOMContentLoaded', () => {
     // Select the DOM elements for interaction
@@ -20,9 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const taskItem = document.createElement('li');
         taskItem.textContent = taskText;
 
+        // Set the class name of the list item directly
+        taskItem.className = 'task-item';
+
         // Create a remove button for the task
         const removeButton = document.createElement('button');
         removeButton.textContent = 'Remove';
+
+        // Set the class name of the button directly
         removeButton.className = 'remove-btn';
 
         // Arrow function to remove the task when the button is clicked
@@ -45,11 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
     taskInput.addEventListener('keypress', (event) => {
         if (event.key === 'Enter') addTask(); // Call addTask if Enter is pressed
     });
-});
-    
-    taskInput.addEventListener('keypress', (event) => {
-        if (event.key === 'Enter') { 
-            addTask();
-        }
-    });
-});
+
+
+       
